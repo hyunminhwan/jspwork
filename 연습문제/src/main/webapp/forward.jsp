@@ -10,17 +10,18 @@
 
 <%
 	request.setCharacterEncoding("utf-8");
-	String boo=request.getParameter("b");
+	String blood=request.getParameter("blood");
+	String name =request.getParameter("name");
 
-if(boo.equals("A")){
+if(blood.equals("A")){
 	%>
 	<jsp:forward page="A.jsp"/>
 	<% 
-}else if(boo.equals("B")){
+}else if(blood.equals("B")){
 %>	
 	<jsp:forward page="B.jsp"/>
 <% 
-}else if(boo.equals("AB")){
+}else if(blood.equals("AB")){
 %>
 	<jsp:forward page="AB.jsp"/>
 <%	

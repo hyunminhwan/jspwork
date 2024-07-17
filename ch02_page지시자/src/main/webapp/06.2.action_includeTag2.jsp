@@ -17,3 +17,8 @@ Action의 include Body입니다.
 <%=name %>
 </body>
 </html>
+
+
+
+
+

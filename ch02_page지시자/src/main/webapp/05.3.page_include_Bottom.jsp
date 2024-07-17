@@ -4,7 +4,7 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>Insert title here</title>
+<title>Bottom</title>
 </head>
 <body>
 	include지시자의 Bottom부분입니다.
