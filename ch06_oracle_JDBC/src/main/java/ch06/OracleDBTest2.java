@@ -19,7 +19,7 @@ public class OracleDBTest2 {
 			while(rs.next()) {
 //				rs.getString("dept_id");
 			String id=rs.getString(1);
-			String title=rs.getString("dept_title");
+			String title=rs.getString("dept_title");//이름을 자주사용하자 
 			String location=rs.getString(3);
 			System.out.println(id+","+title+","+location);
 			}

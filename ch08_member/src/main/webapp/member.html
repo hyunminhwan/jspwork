@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+table{
+    margin: 0 auto;
+    width: 70%;
+    height: 800px;
+    background-color: aquamarine;
+}
+</style>
+
+<body>
+    <form action="">
+        <table border="1">
+            <tr>
+                <th colspan="3">회원가입</th>
+            </tr>
+            <tr>
+                <td>아이디</td>
+                <td><input type="text" name="id">
+                    <button>중복체크</button>
+                </td>
+                <td>영문과 숫자로만 입력.</td>
+            </tr>
+            <tr>
+                <td>비밀번호</td>
+                <td><input type="password" name="pwd"></td>
+                <td>특수기호,영문,숫자가 각1개 이상씩 들어가야 되고 8글자 이상</td>
+            </tr>
+            <tr>
+                <td>비밀번호 확인</td>
+                <td><input type="password" name="repwd"></td>
+                <td>위의 비밀번호를 한번 더 넣으세요</td>
+            </tr>
+            <tr>
+                <td>이름</td>
+                <td><input type="text" name="name"></td>
+                <td>한글로 입력</td>
+            </tr>
+            <tr>
+                <td>성별</td>
+                <td>
+                    <input type="radio" name="gender" value="남자" id="man">
+                    <label for="man">남자</label>
+                    <input type="radio" name="gender" value="여자" id="woman">
+                    <label for="woman">여자</label>
+                </td>
+                <td>성별을 선택해 주세요</td>
+            </tr>
+            <tr>
+                <td>생년월일</td>
+                <td><input type="number" name="birthday"></td>
+                <td>6글자로 입력.ex)190315</td>
+            </tr>
+            <tr>
+                <td>E-mail</td>
+                <td><input type="email" name="email" size="30"></td>
+                <td>ex)email@naver.com</td>
+            </tr>
+            <tr>
+                <td>우편번호</td>
+                <td>
+                    <input type="text" name="zipcode" id="postcode">
+                    <button>우편변호찾기</button>
+                </td>
+                <td>우편번호를 검색하세요</td>
+            </tr>
+            <tr>
+                <td>주소</td>
+                <td>
+                    <input type="text" name="address" id="addr" size="50"><br>
+                    <input type="text" name="detail_address" id="detailAddr">
+                </td>
+                <td>상세주소가 있으면 입력해주세요</td>
+            </tr>
+            <tr>
+                <td>취미</td>
+                <td>
+                    <input type="checkbox" name="hobby" id="internet">
+                    <label for="internet">인터넷</label>
+                    <input type="checkbox" name="hobby" id="travel">
+                    <label for="travel">여행</label>
+                    <input type="checkbox" name="hobby" id="game">
+                    <label for="game">게임</label>
+                    <input type="checkbox" name="hobby" id="move">
+                    <label for="move">영화</label>
+                    <input type="checkbox" name="hobby" id="sports">
+                    <label for="sports">운동</label>
+                </td>
+                <td>취미를 선택하세요</td>
+            </tr>
+            <tr>
+                <td>직업</td>
+                <td>
+                    <select name="job" id="job1">
+                        <option value="군인">군인</option>
+                        <option value="경찰">경찰</option>
+                        <option value="소방관">소방관</option>
+                        <option value="프로그래머">프로그래머</option>
+                        <option value="선생님">선생님</option>
+                        <option value="연구원">연구원</option>
+                        <option value="생산직">생산직</option>
+                    </select>
+                </td>
+                <td>직업을 선택하세요</td>
+            </tr>
+            <tr>
+                <td colspan="3" align="center">
+                    <input type="button" value="회원가입"></input>
+                    <input type="reset"value="다시쓰기"></input>
+                    <input type="button" value="로그인"></input>
+                </td>
+            </tr>
+        </table>
+    </form>
+</body>
+
+</html>
