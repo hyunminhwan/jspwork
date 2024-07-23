@@ -1,5 +1,12 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
+ <%@ page import="ch09.*, java.util.*" %>
+<jsp:useBean id="vDao" class="ch09.VoteDao" />
+<%
+	ArrayList<Integer> num = vDao.getsnum();
+	
+%>
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -32,15 +39,21 @@
 				<th>제목</th>
 				<th>시작일~종료일</th>
 			</tr>
-			<!--
-			<tr> 
-				for() 
-			</tr>
-			-->
-			
+			<%
+			for(int i=0;i<num.size();i++){
+				VoteList slist = vDao.getSlist(num.get(i));
+				%>
+				<tr>
+					<td ><%=num.get(i) %></td>
+					<td><a href="voteList.jsp?num=<%=num.get(i) %>"><%=slist.getQuestion() %></a></td>
+					<td><%=slist.getSdate().substring(0,11) +"~"+slist.getEdate().substring(0,11)%></td>
+				</tr>
+			<%	
+			}
+			%>
 			
 			<tr>
-				<td colspan="3" align="right"><a href="">설문 작성하기</a><td>
+				<td colspan="3" align="right"><a href="voteInsertProc.jsp">설문 작성하기</a><td>
 			</tr>
 		</table>
 	</div>
