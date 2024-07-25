@@ -63,17 +63,21 @@
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
 </head>
 <style>
-	*{margin: 0 auto; text-align: center;}
+	*{margin: 0 auto; width: 1200px; }
 	header>h1{
 	margin-top: 60px;
 	}
 	table {
-		width: 50%;
+	
 	}
 	h3{
 	text-align: left;
 	margin-top: 60px;
 	}
+	.op{
+	width: 300px;
+	}
+
 </style>
 <script type="text/javascript">
 	function block(value) {
@@ -173,7 +177,7 @@
 					%>
 			</td>
 				<td colspan="2" style="text-align:right;">
-					<a href="" class="a">[글쓰기]</a>&emsp;
+					<a href="post.jsp" class="a">[글쓰기]</a>&emsp;
 					<a href="javascript:list();" class="a">[처음으로]</a>
 				</td>
 			</tr>
@@ -182,13 +186,13 @@
 			<table align="center" width="700">
 				<tr>
 					<td align="center">
-						<select name="keyField">
-							<option value="name">이름</option>
-							<option value="subject">제목</option>
-							<option value="content">내용</option>
+						<select name="keyField" class="op" style="width: 150px;">
+							<option value="name" >이름</option>
+							<option value="subject" >제목</option>
+							<option value="content" >내용</option>
 						</select>
-						<input name="keyWord" required>
-						<input type="submit" value="찾기">
+						<input name="keyWord" style="width: 300px;"  required>
+						<input type="submit" style="width: 50px;" value="찾기">
 					</td>
 				</tr>
 			</table>

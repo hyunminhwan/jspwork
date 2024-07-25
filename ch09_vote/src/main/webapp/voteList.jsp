@@ -1,7 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
- <%@ page import="ch09.*, java.util.*" %>
-<jsp:useBean id="vDao" class="ch09.VoteDao" />
+ <%@ page import="vote.*,java.util.*" %>
+<jsp:useBean id="vDao" class="vote.VoteDao" />
 <%
 	ArrayList<Integer> num = vDao.getsnum();
 	
