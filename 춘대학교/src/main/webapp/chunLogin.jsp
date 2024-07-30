@@ -7,25 +7,30 @@
 <meta charset="UTF-8">
 <title>Insert title here</title>
 </head>
+
 <style>
+*{background-color :}
 table {
+	background-color : skyblue;
 	margin-top: 200px;
 	width: 400px;
 }
 </style>
+<!-- 서버로부터 학번 받기 -->
+
 <body>
-	<form >
+	<form action="loginProc.jsp" method="post">
 		<table align="center">
 			<tr>
 				<th colspan="2"><h3>춘대학교에 오신걸 환영합니다</h3></th>
 			</tr>
 			<tr>
 				<td>아이디</td>
-				<td><input name="id" required></td>
+				<td><input name="id" id="id" required></td>
 			</tr>
 			<tr>
 				<td>비밀번호</td>
-				<td><input type="password" name="pwd" required></td>
+				<td><input type="password" name="pwd" id="pw" required></td>
 			</tr>
 			<tr>
 				<td colspan="2" align="center">
@@ -34,5 +39,6 @@ table {
 			</tr>
 		</table>
 	</form>
+
 </body>
 </html>

@@ -19,7 +19,9 @@ public class ReplyDao {
 	
 		try {
 			con=pool.getConnection();
-			sql="select * from reply ref="+ref;
+			sql="select * from reply  where ref="+ref 
+				+" order by no desc";
+					
 			rs=con.createStatement().executeQuery(sql);
 			
 			while(rs.next()) {
@@ -37,5 +39,23 @@ public class ReplyDao {
 			pool.freeConnection(con);
 		}
 		return alist;
+	}
+	
+	public boolean insert(Reply reply) {
+		boolean flag = false;
+		try {
+			con=pool.getConnection();
+			sql="insert into reply values (seq_reply.nextval,?,?,?,sysdate)";
+			pstmt = con.prepareStatement(sql);
+			pstmt.setString(1,reply.getContent());
+			pstmt.setInt(2, 1);
+			pstmt.setString(3,reply.getName());
+			if(pstmt.executeUpdate() == 1) { // 반환값 : insert가 안되었을 때 0반환, insert가 잘 되었을 때 1반환 
+				flag = true;
+			}  
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+		return flag;
 	}
 }

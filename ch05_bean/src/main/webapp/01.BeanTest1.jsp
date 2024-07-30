@@ -12,5 +12,7 @@
 <body>
 	자바빈의 name의 값 : <jsp:getProperty property="name" name="test"/>
 					  <!-- getName() -->
+	
+	
 </body>
 </html>

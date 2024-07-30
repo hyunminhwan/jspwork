@@ -69,4 +69,14 @@
     <servlet-name>AjaxServletReplyList</servlet-name>
     <url-pattern>/ajaxReply/rlist.bo</url-pattern>
   </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>AjaxServletReply</display-name>
+    <servlet-name>AjaxServletReply</servlet-name>
+    <servlet-class>ajaxReply.AjaxServletReply</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>AjaxServletReply</servlet-name>
+    <url-pattern>/ajaxReply/rlist1.bo</url-pattern>
+  </servlet-mapping>
 </web-app>

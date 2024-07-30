@@ -22,5 +22,10 @@ public class AjaxServletReplyList extends HttpServlet {
 		
 		response.setContentType("application/json; charset=utf-8"); 
 		new Gson().toJson(alist, response.getWriter());//한줄로;
+		
+		
+		
+
+		
 	}
 }
